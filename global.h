@@ -6,4 +6,7 @@
 #include<algorithm>
 #include<numeric>
 #include<stack>
+#include<map>
+#include<queue>
+#include<string>
 using namespace std;
