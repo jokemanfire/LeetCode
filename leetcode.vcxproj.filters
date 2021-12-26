@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="从前序中序构造二叉树.cpp">
+    <ClCompile Include="Bigram分词.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

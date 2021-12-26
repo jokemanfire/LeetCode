@@ -1,55 +1,31 @@
 #include"global.h"
-
 class Solution {
 public:
     string longestPalindrome(string s) {
-
-        string reverse_data = s;
-        reverse(reverse_data.begin(), reverse_data.end());
-        vector<vector<int>> result(s.size()+1,vector<int> (s.size()+1,0));
-        vector<vector<int>> flags(s.size() + 1, vector<int>(s.size() + 1, 0));
-        for (int i = 0; i < s.size(); i++)
+        vector<vector<bool>> Result(s.size(), vector<bool>(s.size(), 0));
+        string R;
+        for (int j = 0; j < s.size(); j++)
         {
-            for (int j = 0; j < reverse_data.size(); j++)
+            for (int i = 0; i <= j; i++)
             {
-                if (s[i] == reverse_data[j])
+                if (j - i <= 1)
                 {
-                    result[i + 1][j + 1] = result[i][j] + 1;
-                    flags[i + 1][j + 1] = 1;
+                    Result[i][j] = s[i] == s[j] ? true : false;
                 }
                 else
-                    result[i + 1][j + 1] = max(result[i + 1][j], result[i][j + 1]);
+                {
+                    Result[i][j] = Result[i + 1][j - 1] & (s[i] == s[j]);
+                }
+                if (Result[i][j] == true && j - i >= R.size())
+                    R = s.substr(i,j-i==0?1:j-i);
             }
         }
-        int maxr = result[s.size()][reverse_data.size()];
-        string resultstring;
-        for(int i=1;i<= flags.size()-maxr;i++)
-            for (int j = 1; j <= flags[i].size()-maxr; j++)
-            {
-                resultstring.clear();
-                int k = 1;
-                if (flags[i][j] == 1)
-                {
-                    while (k <= maxr)
-                    {
-                        resultstring += s[i + k - 2];
-                        if (i + k < flags.size() && j + k < flags.size() && flags[i + k][j + k] != 1)
-                        {
-                            break;
-                        }
-                        else
-                            k++;
-                    }
-                    if (k >= maxr)
-                        return resultstring;
-                }
-            }
-        return resultstring;
+        return R;
     }
 };
 
 int main()
 {
-    string data = "aacabdkacaa";
+    string data = "a";
     Solution().longestPalindrome(data);
 }

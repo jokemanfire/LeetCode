@@ -22,7 +22,7 @@
     <ClInclude Include="global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="从前序中序构造二叉树.cpp" />
+    <ClCompile Include="Bigram分词.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
