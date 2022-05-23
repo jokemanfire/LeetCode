@@ -13,4 +13,7 @@
 #include<cctype>
 #include<regex>
 #include<unordered_map>
+#include<list>
+#include<unordered_map>
+#include<sstream>
 using namespace std;

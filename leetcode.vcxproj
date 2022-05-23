@@ -22,7 +22,7 @@
     <ClInclude Include="global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bigram分词.cpp" />
+    <ClCompile Include="为高尔夫比赛砍树.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -26,6 +26,6 @@ public:
 
 int main()
 {
-    string data = "a";
+    string data = "tmikrmvnkzwffmuycgffiqnrepltnfvnggtmwkzmpjpcfuhmdcdlrupmqbimvppbnqinwcuidfckveonfgcknihwztkvrikfunegxfboluzjhxkoxdvdxoczqdkyjziqmjnnrbvcolyxijemlujjofuojdwfhcgzmmnsznhbv";
     Solution().longestPalindrome(data);
 }

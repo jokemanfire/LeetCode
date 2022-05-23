@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bigram分词.cpp">
+    <ClCompile Include="为高尔夫比赛砍树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
